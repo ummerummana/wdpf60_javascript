@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+        function FindMax() {
+
+            const received = prompt("Enter value", "") 
+
+            //let numbers = [5, 8, 17, 4, 9];
+
+            const numbers = received.split(",");
+
+            //alert(typeof(numbersArray));
+            console.log(numbers);
+
+            let max = numbers[0]; //initialize to the first 
+            max = parseInt(max);
+        
+            for (let i = 1; i < numbers.length; i++) {
+                if ( parseInt(numbers[i]) > max ) {
+                    max = numbers [i];
+            }
+
+        }
+        console.log(max);
+        //document.getElementById("show").innerHTML = max;
+        //document.write(max); //outputs: 17
+
+        }
+    </script>
+    <button>CLick Here</button>
+</body>
+</html>

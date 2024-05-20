@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td, tr, th{
+            border: 1px solid;
+            background-color: aqua;
+            height: 5px;
+            width: 50px;
+            text-align: center;
+            
+            
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+    
+</head>
+<body>
+    <script>
+        //let i = 20;
+        //let text = "";
+
+        //while (i<=30){
+
+            //text  += i + "<br>";
+            //i++;
+        //}
+
+        //document.write(text);
+
+        const flowers = new Array("Rose", "Tulip", "Belly", "Waterlily");
+
+        let i = 0;
+        let output = "<table>";
+            output += "<tr><th>SN</th><th>Name</th></tr>"
+
+        while (i<flowers.length){
+            sn = i + 1;
+            output += "<tr><td>" + i+1 + "</td>";
+            output += "<td>" + flowers[i]   + "</td></tr>";
+
+            i++;
+        }
+
+        output += "</table>";
+
+        document.write(output);
+        
+    </script>
+</body>
+</html>
