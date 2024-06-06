@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+
+</head>
+<body>
+    <div id="show"></div>
+
+    
+    <script type="module">
+        import student_info, {capital, country} from "./Student.js";
+        let output = student_info();
+        output += `<br> ${capital}, ${country}`;
+        document.getElementById("show").innerHTML = output;
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="Show"></p>
+
+    <form action="" name="test">
+
+        <input type="text" name="fname" placeholder="Enter first Name" id=""><br>
+        <input type="text" name="lname" placeholder="Enter last name" id=""><br>
+        <input type="button" name="SUBMIT" value="submit" onclick=" myName()" id="">
+    </form>
+    <script>
+        function myName(){
+            Fname = document.test.fname.value;
+          let  Lname = document.test.lname.value;
+
+            let full = Fname + " " + Lname;
+
+             document.getElementById("Show").innerHTML= full
+        }
+
+       
+    </script>
+</body>
+</html>
