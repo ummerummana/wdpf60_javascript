@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+    <fieldset>
+        <h1>Event Registration Form</h1>
+        <br><br>
+
+        <form name="login" action="thank_you.html" onsubmit="return eventvalid()">
+        <b>Name:</b>
+        <input type="text" name="fname" placeholder="First name">
+        <input type="text" name="lname" placeholder="Last name">
+        <br><br>
+        <b>Company:</b>
+        <input type="text" name="company">
+        <br><br>
+        <b>Email: </b>
+        <input type="email" name="email">
+        <br><br>
+        <b>Phone: </b>
+        <input type="number" name="phone" placeholder="Enter Your Phone Number">
+        <br><br>
+        <b>Subject: </b>
+        <select name="subject" id="">
+            <option value="">Choose option</option>
+            <option value="">Javascript</option>
+            <option value="">HTML</option>
+            <option value="">CSS</option>
+            <option value="">PHP</option>
+            <option value="">CS</option>
+        </select><br><br>
+        <b>Are you an existing customer?</b><br><br>
+        <input type="radio" name="R?" value="Yes">Yes
+        <input type="radio" name="R" value="No">No
+       <br><br>
+       <button type="submit">REGISTER</button>
+       
+       
+       
+      
+    </form>
+</fieldset>
+
+    <script>
+        function eventvalid() {
+            let fname = document.login.fname.value;
+            let lname = document.login.lname.value;
+            let company = document.login.company.value;
+            let email = document.login.email.value;
+            let phone = document.login.phone.value;
+            let subject = document.login.subject.value;
+            let R = document.login.R.value;
+
+            const errors = [];
+
+            if(fname == "") {
+                errors[errors.length] = "First name can't be empty";
+            }
+
+            if(lname == "") {
+                errors[errors.length] = "Last name can't be empty";
+            }
+
+            if(company == "") {
+                errors[errors.length] = "Company name can't be empty";
+            }
+            
+            if(email == "") {
+                errors[errors.length] = "Email can't be empty";
+            }
+            
+            if(phone == "") {
+                errors[errors.length] = "Phone number can't be empty";
+            }
+            
+            
+            if(R == "") {
+                errors[errors.length] = "Please select an option";
+            }
+            
+
+            if(errors.length > 0) {
+                let ErrorOutput = "<ul>";
+            for (let i = 0; i < errors.length; i++) {
+                ErrorOutput += "<li>" + errors[i] + "</li>";
+            }
+            ErrorOutput += "</ul>";
+
+            document.getElementById("show").innerHTML = ErrorOutput;
+            return false;
+
+        
+            }
+            else {
+                //document.getElementById("show").innerHTML = "";
+                return true;
+            }
+
+        }
+    </script>
+</body>
+</html>

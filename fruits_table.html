@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td, tr, th{
+            border: 1px solid;
+            background-color: rgb(239, 154, 247);
+            height: 5px;
+            width: 50px;
+            text-align: center;
+            
+            
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const fruits = new Array ("Apple", "Orange", "Lichi", "Jackfruit", "Mango");
+         const prices = new Array ("200", "300", "400", "500", "600");
+
+        let i = 0;
+        let output = "<table>";
+            output += "<tr><th>SN</th><th>Name</th></tr>"
+
+            while (i < fruits.length) {
+                sn = i + 1 ;
+                output += "<tr><td>" + sn + "</td>";
+                    output += "<td>" + fruits[i]   + "</td></tr>";
+                         i++;
+            }
+
+             output += "</table>";
+
+        document.write(output);
+        
+    </script>
+</body>
+</html>
